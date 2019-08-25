@@ -15,9 +15,10 @@ image/mysql from docker percona:5.7.14
 │   └── my.cnf
 └── README.md
 
-*确保先Run mysql, 再Run cacti，因为cacti会自动进入数据库建库*
-*cacti的环境变量中确保mysql的IP正确*
-*for mysql > = 8.0*  **--default-authentication-plugin=mysql_native_password**
+#确保先Run mysql, 再Run cacti，因为cacti会自动进入数据库建库
+#cacti的环境变量中确保mysql的IP正确
+#for mysql > = 8.0*  **--default-authentication-plugin=mysql_native_password
+#可以使用其他版本的mysql,需要确保my.cnf格式正确，mysql调用本地my.cnf配置
   
   
 docker run -itd -p 3306:3306  \
